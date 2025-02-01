@@ -22,9 +22,9 @@ func checkNetwork(url string) (bool, time.Duration) {
 		return false, 0
 	}
 
-	start := time.Now() // 요청 시작 시간 기록
+	start := time.Now()
 	resp, err := http.DefaultClient.Do(req)
-	duration := time.Since(start) // 요청 종료 후 시간 측정
+	duration := time.Since(start)
 
 	if err != nil {
 		return false, duration
